@@ -19,7 +19,8 @@ public class RentalEventConsumers {
     private final Logger log = LoggerFactory.getLogger(RentalEventConsumers.class);
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final CompensationUsecase compensationUsecase;
-    @KafkaListener(topics="${consumer.topic1.name}",groupId = "${consumer.groupid.name}")
+
+    @KafkaListener(topics="${kafka.topics.consumer.rental-result}",groupId = "${spring.kafka.consumer.group-id}")
     public void consumeRental(ConsumerRecord<String, String> record) throws Exception {
         try {
             System.out.printf("ConsumerRecord: " + record.value());

@@ -22,9 +22,8 @@ public class RentalItem {
 
    private LocalDate overdueDate; //반납예정일
 
-   public static RentalItem createRentalItem(Item item)
-   {
-    return new RentalItem(item,LocalDate.now(),false,LocalDate.now().plusDays(14));
+   public static RentalItem createRentalItem(Item item) {
+      return new RentalItem(item,LocalDate.now(),false,LocalDate.now().plusDays(14));
    }
 
    public static RentalItem sample(){

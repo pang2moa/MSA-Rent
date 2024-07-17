@@ -24,7 +24,7 @@ public class RentalController {
     private final InquiryUsecase inquiryUsecase;
 
     @ApiOperation(value = "도서카드 생성",notes = "사용자정보 -> 도서카드정보")
-    @PostMapping("/RentalCard/")
+    @PostMapping("/RentalCard")
     public ResponseEntity<RentalCardOutputDTO> creatRentalCard(@RequestBody UserInputDTO userInputDTO)
     {
         RentalCardOutputDTO createRentalCard = createRentalCardUsecase.createRentalCard(userInputDTO);
